@@ -13,7 +13,7 @@ export default function Home() {
         'Email support',
         'Implementation checklist',
       ],
-      stripeLink: 'https://buy.stripe.com/essentials',
+      stripeLink: 'https://buy.stripe.com/test_dRmaEW9yy8aB6glfjydfG02',
       featured: false,
     },
     {
@@ -28,7 +28,7 @@ export default function Home() {
         'Priority email support',
         '1 strategy call (60 min)',
       ],
-      stripeLink: 'https://buy.stripe.com/complete',
+      stripeLink: 'https://buy.stripe.com/test_dRmbJ08uu76x0W19ZedfG01',
       featured: true,
     },
     {
@@ -44,7 +44,7 @@ export default function Home() {
         'Implementation support',
         '90-day follow-up strategy',
       ],
-      stripeLink: 'https://buy.stripe.com/accelerator',
+      stripeLink: 'https://buy.stripe.com/test_8x27sK8uueyZ8ot7R6dfG00',
       featured: false,
     },
   ]
