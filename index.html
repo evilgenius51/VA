@@ -385,6 +385,14 @@
             text-decoration: underline;
         }
 
+        .contact p {
+            margin: var(--spacing-sm) 0;
+        }
+
+        .contact .cta-group {
+            margin-top: var(--spacing-md);
+        }
+
         .guarantee {
             text-align: center;
             margin-top: var(--spacing-md);
@@ -491,6 +499,17 @@
             font-weight: 700;
             margin-bottom: var(--spacing-sm);
         }
+
+        /* Button modifiers */
+        .btn-full-width {
+            width: 100%;
+            margin-top: var(--spacing-sm);
+        }
+
+        .btn-secondary-dark {
+            border-color: var(--text-dark);
+            color: var(--text-dark);
+        }
     </style>
 </head>
 <body>
@@ -589,7 +608,7 @@
                         <li>10 promo ideas</li>
                         <li>3–5 ops tidy-ups</li>
                     </ul>
-                    <a href="https://buy.stripe.com/test_essentials" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Choose Essentials →</a>
+                    <a href="https://buy.stripe.com/test_essentials" class="btn btn-primary btn-full-width">Choose Essentials →</a>
                 </div>
 
                 <!-- Complete (Featured) -->
@@ -605,7 +624,7 @@
                         <li>Ops checklists + Team/Time one-pager</li>
                         <li>Mid-cycle tweak at Day 14</li>
                     </ul>
-                    <a href="https://buy.stripe.com/test_complete" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Get Complete →</a>
+                    <a href="https://buy.stripe.com/test_complete" class="btn btn-primary btn-full-width">Get Complete →</a>
                 </div>
 
                 <!-- VIP -->
@@ -619,7 +638,7 @@
                         <li>2 extra refinements (Day 14 & Day 30)</li>
                         <li>+100 promo prompts & 10 email/SMS templates</li>
                     </ul>
-                    <a href="https://buy.stripe.com/test_vip" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Choose VIP →</a>
+                    <a href="https://buy.stripe.com/test_vip" class="btn btn-primary btn-full-width">Choose VIP →</a>
                 </div>
             </div>
             <div class="guarantee">
@@ -695,10 +714,10 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2>Ready to make the next 30 days count?</h2>
-            <p style="margin: 1rem 0;">Email <a href="mailto:hello@velocity-advisory.com">hello@velocity-advisory.com</a> or pick a package above.</p>
-            <div class="cta-group" style="margin-top: 2rem;">
+            <p>Email <a href="mailto:hello@velocity-advisory.com">hello@velocity-advisory.com</a> or pick a package above.</p>
+            <div class="cta-group">
                 <a href="https://buy.stripe.com/test_complete" class="btn btn-primary">Start with Complete →</a>
-                <a href="#packages" class="btn btn-secondary" style="border-color: var(--text-dark); color: var(--text-dark);">See all packages →</a>
+                <a href="#packages" class="btn btn-secondary btn-secondary-dark">See all packages →</a>
             </div>
         </div>
     </section>
