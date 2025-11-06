@@ -66,17 +66,22 @@ vercel
 
 ## 🔗 Configuration
 
-### Stripe Payment Links
+### ⚠️ IMPORTANT: Stripe Payment Links
 
-Update the Stripe payment links in `app/page.tsx`:
+**Before deploying to production**, you MUST update the Stripe payment links in `app/page.tsx`:
+
+1. Create payment links in your Stripe dashboard: https://dashboard.stripe.com/payment-links
+2. Replace the placeholder URLs:
 
 ```typescript
 {
   name: 'Essentials Playbook',
-  stripeLink: 'https://buy.stripe.com/your-essentials-link',
+  stripeLink: 'https://buy.stripe.com/your-actual-essentials-link',
   // ...
 }
 ```
+
+The current placeholder URLs (`https://buy.stripe.com/essentials`, etc.) will result in 404 errors.
 
 Replace the placeholder URLs with your actual Stripe payment links.
 

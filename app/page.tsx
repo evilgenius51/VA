@@ -1,4 +1,6 @@
 export default function Home() {
+  // TODO: Replace these placeholder Stripe links with your actual Stripe payment URLs
+  // Create payment links at https://dashboard.stripe.com/payment-links
   const packages = [
     {
       name: 'Essentials Playbook',
