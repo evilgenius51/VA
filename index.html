@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocity Advisory - 30-Day Playbooks for Small Business Owners</title>
+    <meta name="description" content="Clear, personalised action plans that stabilise cashflow, boost sales and tidy operations. Built fast in plain English. 90–95% done for you.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary-color: #10b981;
+            --text-dark: #1f2937;
+            --text-gray: #6b7280;
+            --bg-light: #f9fafb;
+            --bg-white: #ffffff;
+            --border-color: #e5e7eb;
+            --highlight-color: #fbbf24;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 3rem;
+            --spacing-xl: 4rem;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--bg-white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border-color);
+            padding: var(--spacing-sm) 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--spacing-md);
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.2;
+        }
+
+        .hero .subhead {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-md);
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: var(--spacing-sm);
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--secondary-color);
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary:hover {
+            background: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .trust-note {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-top: var(--spacing-sm);
+        }
+
+        /* Section Styles */
+        section {
+            padding: var(--spacing-xl) 0;
+        }
+
+        section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-dark);
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        .card {
+            background: var(--bg-white);
+            border-radius: 12px;
+            padding: var(--spacing-md);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+            color: var(--primary-color);
+        }
+
+        .card p, .card ul {
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        .card ul {
+            list-style-position: inside;
+            margin-top: var(--spacing-sm);
+        }
+
+        /* Pricing Cards */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        .pricing-card {
+            background: var(--bg-white);
+            border-radius: 16px;
+            padding: var(--spacing-md);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            position: relative;
+            border: 2px solid var(--border-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--primary-color);
+            transform: scale(1.05);
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.2);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-8px);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--highlight-color);
+            color: var(--text-dark);
+            padding: 0.25rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 700;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-dark);
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .pricing-features {
+            text-align: left;
+            margin: var(--spacing-md) 0;
+            list-style: none;
+        }
+
+        .pricing-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-gray);
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-features li::before {
+            content: "✓ ";
+            color: var(--secondary-color);
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+
+        /* Testimonials */
+        .testimonial {
+            background: var(--bg-white);
+            border-radius: 12px;
+            padding: var(--spacing-md);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .testimonial p {
+            font-style: italic;
+            color: var(--text-gray);
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.7;
+        }
+
+        .testimonial cite {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-style: normal;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--bg-white);
+            border-radius: 8px;
+            margin-bottom: var(--spacing-sm);
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        .faq-question {
+            padding: var(--spacing-sm) var(--spacing-md);
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: var(--bg-light);
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+            font-size: 1.25rem;
+            color: var(--primary-color);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer-content {
+            padding: 0 var(--spacing-md) var(--spacing-md);
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+            background: var(--bg-light);
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .contact a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .guarantee {
+            text-align: center;
+            margin-top: var(--spacing-md);
+            padding: var(--spacing-sm);
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 8px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: var(--spacing-md) 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            margin-top: var(--spacing-sm);
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.875rem;
+            }
+
+            .hero .subhead {
+                font-size: 1.125rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .cta-group {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 var(--spacing-sm);
+            }
+
+            .hero {
+                padding: var(--spacing-md) 0;
+            }
+
+            section {
+                padding: var(--spacing-md) 0;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Number badges */
+        .card-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Velocity Advisory</div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#packages">Packages</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Done-for-you 30-day playbooks for time-poor small-business owners</h1>
+            <p class="subhead">Clear, personalised action plans that stabilise cashflow, boost sales and tidy operations. Built fast in plain English. 90–95% done for you.</p>
+            <div class="cta-group">
+                <a href="https://buy.stripe.com/test_complete" class="btn btn-primary">Get Complete</a>
+                <a href="#how-it-works" class="btn btn-secondary">How it works</a>
+            </div>
+            <p class="trust-note">✓ Backed by our Feels-Clearer-or-Refunded guarantee.</p>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-number">1</div>
+                    <h3>Quick form</h3>
+                    <p>Complete a 7–10 minute questionnaire with simple numbers and context.</p>
+                </div>
+                <div class="card">
+                    <div class="card-number">2</div>
+                    <h3>We build</h3>
+                    <p>We turn your inputs into a decision-ready P.I.V.O.T. Playbook (Profit, Income, Visibility, Operations, Team & Time).</p>
+                </div>
+                <div class="card">
+                    <div class="card-number">3</div>
+                    <h3>You execute</h3>
+                    <p>Follow the weekly actions, use the checklists and captions, and track the few numbers that matter.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Inside -->
+    <section id="whats-inside">
+        <div class="container">
+            <h2 class="section-title">What's Inside</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Profit Snapshot</h3>
+                    <p>Break-even, simple cash view and 5 core KPIs so you know your survival number.</p>
+                </div>
+                <div class="card">
+                    <h3>Income Boosters</h3>
+                    <p>5–8 levers across pricing, bundles, upsells, cross-sells and retention nudges.</p>
+                </div>
+                <div class="card">
+                    <h3>Visibility Sprint</h3>
+                    <p>30-day promo calendar with copy you can paste into your channels.</p>
+                </div>
+                <div class="card">
+                    <h3>Ops & Team</h3>
+                    <p>Checklists, QA and a Team/Time one-pager so the next 30 days feel structured.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages & Pricing -->
+    <section id="packages">
+        <div class="container">
+            <h2 class="section-title">Packages & Pricing</h2>
+            <div class="pricing-grid">
+                <!-- Essentials -->
+                <div class="pricing-card">
+                    <h3>Essentials Playbook</h3>
+                    <div class="price">£149</div>
+                    <ul class="pricing-features">
+                        <li>14-day action plan</li>
+                        <li>Break-even + 5 core KPIs</li>
+                        <li>3 income quick wins</li>
+                        <li>10 promo ideas</li>
+                        <li>3–5 ops tidy-ups</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/test_essentials" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Choose Essentials →</a>
+                </div>
+
+                <!-- Complete (Featured) -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most popular</div>
+                    <h3>Complete Playbook</h3>
+                    <div class="price">£297</div>
+                    <ul class="pricing-features">
+                        <li>Full 30-day plan (week-by-week)</li>
+                        <li>Expanded KPI & Cash view + Excel layout</li>
+                        <li>5–8 income levers</li>
+                        <li>30-day visibility calendar + 15 captions</li>
+                        <li>Ops checklists + Team/Time one-pager</li>
+                        <li>Mid-cycle tweak at Day 14</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/test_complete" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Get Complete →</a>
+                </div>
+
+                <!-- VIP -->
+                <div class="pricing-card">
+                    <h3>Accelerator VIP</h3>
+                    <div class="price">£549</div>
+                    <ul class="pricing-features">
+                        <li>Priority delivery in 48h (business days)</li>
+                        <li>45-min review call or voice-note audit</li>
+                        <li>30-day implementation tracker</li>
+                        <li>2 extra refinements (Day 14 & Day 30)</li>
+                        <li>+100 promo prompts & 10 email/SMS templates</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/test_vip" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Choose VIP →</a>
+                </div>
+            </div>
+            <div class="guarantee">
+                ✓ Backed by our 7-day Feels-Clearer-or-Refunded guarantee.
+            </div>
+        </div>
+    </section>
+
+    <!-- Owner Feedback -->
+    <section id="feedback">
+        <div class="container">
+            <h2 class="section-title">Owner Feedback</h2>
+            <div class="cards-grid">
+                <div class="testimonial">
+                    <p>"Super clear weekly actions. We made decisions faster and saw wins in week two."</p>
+                    <cite>— Client A</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"Pricing nudges + promo calendar = immediate lift in bookings."</p>
+                    <cite>— Client B</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"Exactly what we needed: plain English and an executable checklist."</p>
+                    <cite>— Client C</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">FAQ</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What do you need from me?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            A short form (7–10 minutes) with simple numbers and context. That's it. We handle the rest.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How fast is delivery?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Complete delivers in a few business days. VIP offers 48-hour priority (business days).
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What if it doesn't feel useful?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            You're covered by the 7-day Feels-Clearer-or-Refunded guarantee.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Ready to make the next 30 days count?</h2>
+            <p style="margin: 1rem 0;">Email <a href="mailto:hello@velocity-advisory.com">hello@velocity-advisory.com</a> or pick a package above.</p>
+            <div class="cta-group" style="margin-top: 2rem;">
+                <a href="https://buy.stripe.com/test_complete" class="btn btn-primary">Start with Complete →</a>
+                <a href="#packages" class="btn btn-secondary" style="border-color: var(--text-dark); color: var(--text-dark);">See all packages →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Velocity Advisory</p>
+            <div class="footer-links">
+                <a href="/privacy">Privacy</a>
+                <a href="/terms">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href.length > 1) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
